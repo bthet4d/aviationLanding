@@ -1,0 +1,45 @@
+---
+if (Astro.request.method === "POST") {
+  try {
+    const formData = await Astro.request.formData();
+    const name = formData.get("firstName");
+    const lastName = formData.get("lastName");
+    const email = formData.get("email");
+    const message = formData.get("message");
+    //TODO - PROCESS DATA
+    
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+
+}
+---
+
+<section class="flex flex-col justify-center items-center mb-8 text-neutral-200
+ ">
+    <div class="container pb-16 mb-8">
+      <h2 class="text-2xl float-right">Contact Us</h2>
+      <form id="contactForm" class="mt-4" method="POST">
+        <div class="mb-4">
+          <label for="firstName" class="block w-1/2">First Name</label>
+          <input type="text" id="firstName" name="firstName" required class="w-full p-2 border rounded">
+        </div>
+        <div class="mb-4">
+          <label for="lastName" class="block w-1/2">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required class="w-full p-2 border rounded">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block">Email</label>
+          <input type="email" id="email" name="email" required class="w-full p-2 border rounded">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block">Message</label>
+          <textarea id="message" name="message" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
+        </div>
+        <button type="submit" class="bg-yellow-700 px-4 py-2 rounded-full hover:bg-blue-900 transition">Submit</button>
+      </form>
+    </div>
+  </section>
+  

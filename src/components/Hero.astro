@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import localAviationImageFlight from '../images/sizedPlaneInFlight.png';
+
+---
+
+<section class="
+    demo-wrap
+    text-neutral-200 
+    p-8
+    bg-gradient-to-b from-secondary via-primary to-secondary
+    "
+>
+    <div class="mb-4 flex flex-row">
+
+        <div>
+            <Image
+            src={localAviationImageFlight}
+            class="h-1/8 max-w-full rounded-full"
+            alt="" />
+        </div>
+    
+        <div class="flex flex-col pt-8 justify-center items-center content-end">
+            <div class="ml-16 content-end">
+                <h1 class="text-4xl font-bold mb-8">Welcome to our bad ass website!</h1>
+
+                <p class="text-lg mt-4 mb-4">Discover amazing things here.</p>
+                <a href="#contactForm" class="px-4 py-2 mt-6 rounded-full bg-yellow-700 hover:bg-blue-900 transition">Get Started</a>
+            </div>
+        </div>
+      </div>
+</section>
+
+<style>
+    
+</style>

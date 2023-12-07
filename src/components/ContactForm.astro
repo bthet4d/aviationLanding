@@ -2,14 +2,21 @@
 if (Astro.request.method === "POST") {
   try {
     const formData = await Astro.request.formData();
+    console.log("Form Data:");
+    console.log(formData);
     const name = formData.get("firstName");
     const lastName = formData.get("lastName");
     const email = formData.get("email");
-    const message = formData.get("message");
+    const interests = formData.getAll("interests");
+    console.log("Name: ", name);
+    console.log("Last Name: ", lastName);
+    console.log("Email: ", email);
+    console.log("interssts: ", interests);
     //TODO - PROCESS DATA
     
   } catch (error) {
     if (error instanceof Error) {
+      console.log("Error:")
       console.error(error.message);
     }
   }
@@ -17,26 +24,39 @@ if (Astro.request.method === "POST") {
 }
 ---
 
-<section class="flex flex-col justify-center items-center mb-8 text-neutral-200
- ">
+<section class="flex flex-col justify-center items-center mb-8 text-neutral-200">
     <div class="container pb-16 mb-8">
       <h2 class="text-2xl float-right">Contact Us</h2>
       <form id="contactForm" class="mt-4" method="POST">
         <div class="mb-4">
           <label for="firstName" class="block w-1/2">First Name</label>
-          <input type="text" id="firstName" name="firstName" required class="w-full p-2 border rounded">
+          <input type="text" id="firstName" name="firstName" required class="w-full p-2 bg-gray-50 border border-gray-300 rounded-lg text-black">
         </div>
         <div class="mb-4">
           <label for="lastName" class="block w-1/2">Last Name</label>
-          <input type="text" id="lastName" name="lastName" required class="w-full p-2 border rounded">
+          <input type="text" id="lastName" name="lastName" required class="w-full p-2 bg-gray-50 border border-gray-300 rounded-lg text-black">
         </div>
         <div class="mb-4">
           <label for="email" class="block">Email</label>
-          <input type="email" id="email" name="email" required class="w-full p-2 border rounded">
+          <input type="email" id="email" name="email" required class="w-full p-2 bg-gray-50 border border-gray-300 rounded-lg text-black">
         </div>
+
         <div class="mb-4">
-          <label for="message" class="block">Message</label>
-          <textarea id="message" name="message" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
+          <label for="interests" class="block">What interests you?</label>
+
+          <select name="interests" id="interests" multiple class="bg-gray-50 border border-gray-300 text-black rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option value="Content focused on the health of pets">Content focused on the health of pets</option>
+            <option value="Content by trainers and behavior counselors">Content by trainers and behavior counselors</option>
+            <option value="Content focused on food for pets">Content focused on food for pets</option>
+            <option value="Content about various pet and animal rescue centers">Content about various pet and animal rescue centers</option>
+            <option value="Content about puppies, kittens, and new pets">Content about puppies, kittens, and new pets</option>
+            <option value="Content about wildlife and the animal kingdom">Content about wildlife and the animal kingdom</option>
+            <option value="Content by pet groomers">Content by pet groomers</option>
+            <option value="Content focusing on pets who are in their senior years">Content focusing on pets who are in their senior years</option>
+            <option value="Content about traveling with pets">Content about traveling with pets</option>
+            <option value="Content about service pets and service animals">Content about service pets and service animals</option>
+            <option value="Movies about cats and dogs">Movies about cats and dogs</option>
+          </select>
         </div>
         <button type="submit" class="bg-yellow-700 px-4 py-2 rounded-full hover:bg-blue-900 transition">Submit</button>
       </form>

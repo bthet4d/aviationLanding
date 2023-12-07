@@ -1,22 +1,55 @@
 ---
+import featureVideo from '../assets/videos/featureVideo.mp4';
+import sizzleVideo from '../assets/videos/funnyDogPlaying.mp4';
+import trailersVideo from '../assets/videos/awesomeDogMovies.mp4';
+
 import Layout from '../Layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
 import CallToAction from '../components/CallToAction.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Footer from '../components/Footer.astro';
-import VideoOverlay from '../components/VideoOverlay.astro';
+import VideoWall from '../components/VideoWall.astro';
+import SizzleReel from '../components/SizzleReel.astro';
 
-const title = "**Company Name";
+const title = "Watch Buddi";
+const copyRight = "Unified Media Development, LLC.";
 ---
 
 <Layout	title={title}>
-    <Nav />
-    <Hero />
-    <CallToAction />
-    <VideoOverlay />
-    <ContactForm />
-    <Footer title={title}></Footer>
+        <Nav />
+
+        <Hero />
+    
+        <CallToAction />
+    
+        <VideoWall src={featureVideo}/>
+    
+        <section class="flex flex-col justify-center items-center mb-8 text-neutral-200">
+            <div class="flex flex-col items-center justify-center">
+                <p class="text-lg mt-4 mb-4">Movies, TV Shows, Live Cams, 24/7 Streaming Channels… content by pet people, for pet people, commercial free, for only $7.99 a month, or $79 a year.</p>
+                <p class="text-lg mt-4 mb-4">Here&apos;s a quick preview of what buddi is bringing to your screen.</p>
+            </div>
+        </section>
+        
+        <SizzleReel src={sizzleVideo}/>
+    
+        <section class="flex flex-col justify-center items-center mb-8 text-neutral-200">
+            <div class="conainer flex flex-col items-center justify-center">
+                <p class="text-lg mt-4 mb-4">Wanna see even more of what buddi fetched? Check out these trailers!</p>
+            </div>
+        </section>
+    
+        <VideoWall src={trailersVideo}/>
+    
+        <ContactForm />
+        
+        <section class="flex flex-col justify-center items-center mb-8 text-neutral-200">
+            <div class="conainer flex flex-col items-center justify-center">
+                <p class="text-lg mt-4 mb-4">Follow buddi on social media and find out what buddi is up to!</p>
+            </div>
+        </section>
+        <Footer copyRight={copyRight}></Footer>
 </Layout>
 
 

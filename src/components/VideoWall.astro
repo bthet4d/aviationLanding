@@ -1,0 +1,13 @@
+---
+const { src } = Astro.props;
+
+---
+<section id="videos" class="bg-gradient-to-b from-secondary via-secondary to-primary
+p-8 text-center text-neutral-200" >
+    <div class="relative flex items-center justify-center h-screen mb-12 overflow-hidden rounded-xl">
+        <!-- Video Wall -->
+        <video class="absolute z-10 w-auto min-w-full min-h-full max-w-none" loop muted autoplay>
+            <source src={src}></source>
+        </video>
+    </div>
+</section>

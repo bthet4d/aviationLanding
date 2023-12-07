@@ -7,9 +7,6 @@ export default {
       colors: {
         'primary': '#02061E',	/* Main Primary color */
         'secondary': '#060C34',
-      },
-      backgroundImage: {
-        'bg-hero-pattern': 'url("src/images/classicPlaneTakingOff.png")',
       }
     },
   },

@@ -1,28 +1,32 @@
 ---
 
 ---
-<div class="flex flex-row justify-center">
-    <div class="p-2 bg-neutral rounded-box text-neutral-200">
-        <span class="countdown font-mono text-5xl">
-            <span id="days"></span>
-        </span>
-    </div> 
-    <div class="p-2 bg-neutral rounded-box text-neutral-200">
-        <span class="countdown font-mono text-5xl">
-            <span id="hours"></span>
-        </span>
-    </div> 
-    <div class="p-2 bg-neutral rounded-box text-neutral-200">
-        <span class="countdown font-mono text-5xl">
-            <span id="minutes" ></span>
-        </span>
-    </div> 
-    <div class="p-2 bg-neutral rounded-box text-neutral-200">
-        <span class="countdown font-mono text-5xl">
-            <span id="seconds"></span>
-        </span>
+<section class="flex flex-col mt-16 mb-16 h-96 justify-center items-center text-center
+">
+    <div class="flex flex-row md:text-7xl sm:text-3xl min-h-full mb-16 pb-16 pt-16">
+        <div class="p-1.5 bg-neutral rounded-box text-neutral-200">
+            <span class="countdown font-mono m">
+                <span id="days"></span>
+            </span>
+        </div> 
+        <div class="p-1.5 bg-neutral rounded-box text-neutral-200">
+            <span class="countdown font-mono">
+                <span id="hours"></span>
+            </span>
+        </div> 
+        <div class="p-1.5 bg-neutral rounded-box text-neutral-200">
+            <span class="countdown font-mono">
+                <span id="minutes" ></span>
+            </span>
+        </div> 
+        <div class="p-1.5 bg-neutral rounded-box text-neutral-200">
+            <span class="countdown font-mono">
+                <span id="seconds"></span>
+            </span>
+        </div>
     </div>
-</div>
+</section>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {

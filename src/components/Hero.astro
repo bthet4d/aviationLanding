@@ -3,12 +3,11 @@ import { Image } from 'astro:assets';
 import movieNight from '../assets/images/movieNight_small.png';
 
 ---
-
 <section class="
     
     text-neutral-200 
     p-8
-    bg-gradient-to-b from-secondary via-primary to-secondary
+    bg-gradient-to-b from-primary via-primary to-secondary
     "
 >
     <div>
@@ -16,22 +15,20 @@ import movieNight from '../assets/images/movieNight_small.png';
             Fetching content for <br />pet people!
           </h1>
     </div>
-    <div class="mb-4 flex flex-row">
+    <div class="flex flex-col lg:flex-row">
 
-        <div>
-            <Image
-            src={movieNight}
-            class="h-1/8 max-w-full rounded-full"
-            alt="" />
+        <Image
+        src={movieNight}
+        class="h-1/8 max-w-full rounded-full"
+        alt="" />
+        
+        <div class="m-8 w-3/4">
+            <p class="text-lg overflow-wrap mt-4 mb-2 lg:w-full sm:w-1/2">Stop endlessly scrolling and let buddi fetch the best entertaining and family-friendly movies and TV shows for pet people of all ages.</p>
+            <br/>
+                <a href="#contactForm" class="block w-fit bg-yellow-700 px-4 py-2 mt-2 rounded-full hover:bg-blue-900 transition">Get Started</a>
         </div>
-    
-        <div class="flex flex-col pt-8 justify-center items-center content-end">
-            <div class="ml-16 content-end">
-                <p class="text-lg mt-4 mb-4">Stop endlessly scrolling and let buddi fetch the best entertaining and family-friendly movies and TV shows for pet people of all ages.</p>
-                <a href="#contactForm" class="px-4 py-2 mt-6 rounded-full bg-yellow-700 hover:bg-blue-900 transition">Get Started</a>
-            </div>
-        </div>
-      </div>
+        
+    </div>
 </section>
 
 <style>

@@ -11,6 +11,7 @@ import ContactForm from '../components/ContactForm.astro';
 import Footer from '../components/Footer.astro';
 import VideoWall from '../components/VideoWall.astro';
 import SizzleReel from '../components/SizzleReel.astro';
+import Countdown from '../components/Countdown.astro';
 
 const title = "Watch Buddi";
 const copyRight = "Unified Media Development, LLC.";
@@ -18,14 +19,16 @@ const copyRight = "Unified Media Development, LLC.";
 
 <Layout	title={title}>
         <Nav />
-
         <Hero />
-    
         <CallToAction />
-    
-        <VideoWall src={featureVideo}/>
-    
-        <section class="flex flex-col justify-center items-center mb-8 text-neutral-200">
+        <Countdown />            
+        <VideoWall class="bg-gradient-to-a from-primary via-secondary to-primary" src={featureVideo}/>
+        
+        <section class="flex flex-col items-center text-center text-neutral-200
+        bg-gradient-to-b from-primary via-primary to-secondary
+        inset-x-0 
+        bottom-0 
+        p-4">
             <div class="flex flex-col items-center justify-center">
                 <p class="text-lg mt-4 mb-4">Movies, TV Shows, Live Cams, 24/7 Streaming Channels… content by pet people, for pet people, commercial free, for only $7.99 a month, or $79 a year.</p>
                 <p class="text-lg mt-4 mb-4">Here&apos;s a quick preview of what buddi is bringing to your screen.</p>
@@ -34,21 +37,29 @@ const copyRight = "Unified Media Development, LLC.";
         
         <SizzleReel src={sizzleVideo}/>
     
-        <section class="flex flex-col justify-center items-center mb-8 text-neutral-200">
+        <section class="flex flex-col items-center text-center text-neutral-200
+        bg-gradient-to-b from-secondary via-primary to-primary
+
+        inset-x-0 
+        bottom-0 
+        p-4">
             <div class="conainer flex flex-col items-center justify-center">
                 <p class="text-lg mt-4 mb-4">Wanna see even more of what buddi fetched? Check out these trailers!</p>
             </div>
         </section>
     
-        <VideoWall src={trailersVideo}/>
-    
+        <VideoWall class="bg-gradient-to-b from-secondary via-secondary to-primary" src={trailersVideo}/>
         <ContactForm />
         
-        <section class="flex flex-col justify-center items-center mb-8 text-neutral-200">
+        <section class="flex flex-col items-center text-center text-neutral-200
+        inset-x-0 
+        bottom-0 
+        p-4">
             <div class="conainer flex flex-col items-center justify-center">
                 <p class="text-lg mt-4 mb-4">Follow buddi on social media and find out what buddi is up to!</p>
             </div>
         </section>
+        
         <Footer copyRight={copyRight}></Footer>
 </Layout>
 

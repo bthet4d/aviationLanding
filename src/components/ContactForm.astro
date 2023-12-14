@@ -24,28 +24,28 @@ if (Astro.request.method === "POST") {
 }
 ---
 
-<section class="flex flex-col justify-center items-center mb-8 text-neutral-200">
+<div class="flex flex-col justify-center items-center mb-8 text-accent-c bold">
     <div class="m-8">
-      <h2 class="text-2xl block float-right">Contact Us</h2>
+      <h2 class="text-3xl block float-right">Contact Us</h2>
       <br>
-      <form id="contactForm" class="mt-4" method="POST">
+      <form id="contactForm" class="mt-4 txt-xl" method="POST">
         <div class="mb-4">
-          <label for="firstName" class="block w-1/2">First Name</label>
+          <label for="firstName" class="block w-1/2 text-start">First Name</label>
           <input type="text" id="firstName" name="firstName" required class="w-full p-2 bg-gray-50 border border-gray-300 rounded-lg text-black">
         </div>
         <div class="mb-4">
-          <label for="lastName" class="block w-1/2">Last Name</label>
+          <label for="lastName" class="block w-1/2 text-start">Last Name</label>
           <input type="text" id="lastName" name="lastName" required class="w-full p-2 bg-gray-50 border border-gray-300 rounded-lg text-black">
         </div>
         <div class="mb-4">
-          <label for="email" class="block">Email</label>
+          <label for="email" class="block text-start">Email</label>
           <input type="email" id="email" name="email" required class="w-full p-2 bg-gray-50 border border-gray-300 rounded-lg text-black">
         </div>
 
         <div class="mb-4">
-          <label for="interests" class="block">What interests you?</label>
+          <label for="interests" class="block text-start">What interests you?</label>
 
-          <select name="interests" id="interests" multiple class="bg-gray-50 border border-gray-300 text-black rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <select name="interests" id="interests" multiple class="h-auto bg-gray-50 border border-gray-300 text-black rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             <option value="Content focused on the health of pets">Content focused on the health of pets</option>
             <option value="Content by trainers and behavior counselors">Content by trainers and behavior counselors</option>
             <option value="Content focused on food for pets">Content focused on food for pets</option>
@@ -59,8 +59,8 @@ if (Astro.request.method === "POST") {
             <option value="Movies about cats and dogs">Movies about cats and dogs</option>
           </select>
         </div>
-        <button type="submit" class="bg-yellow-700 px-4 py-2 rounded-full hover:bg-blue-900 transition">Submit</button>
+        <button type="submit" class="text-white text-xl bold px-4 py-2 mt-2 rounded-full bg-accent-c">Submit</button>
       </form>
     </div>
-  </section>
+  </div>
   

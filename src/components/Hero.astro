@@ -1,36 +1,39 @@
 ---
 import { Image } from 'astro:assets';
 import movieNight from '../assets/images/movieNight_small.png';
-
 ---
-<section class="
-    
-    text-neutral-200 
-    p-8
-    bg-gradient-to-b from-primary via-primary to-secondary
-    "
->
+<div class="p-8 font-secondary">
     <div>
         <h1 class="mt-0 mb-16 pl-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
             Fetching content for <br />pet people!
           </h1>
     </div>
     <div class="flex flex-col lg:flex-row">
-
         <Image
         src={movieNight}
         class="h-1/8 max-w-full rounded-full"
-        alt="" />
-        
-        <div class="m-8 w-3/4">
-            <p class="text-lg overflow-wrap mt-4 mb-2 lg:w-full sm:w-1/2">Stop endlessly scrolling and let buddi fetch the best entertaining and family-friendly movies and TV shows for pet people of all ages.</p>
-            <br/>
-                <a href="#contactForm" class="block w-fit bg-yellow-700 px-4 py-2 mt-2 rounded-full hover:bg-blue-900 transition">Get Started</a>
+        alt="Family Movie Night!" />
+        <div class="m-8 w-3/4 justify-end items-end">
+            <div class="flex flex-col p-6 w-full rounded-lg shadow-xl shadow-black bg-gradient-to-br from-white to-background-a h-auto mt-16">
+                <p class="flex text-2xl overflow-wrap mt-4 mb-2 text-accent-c font-bold">Stop endlessly scrolling and let buddi fetch the best entertaining and family-friendly movies and TV shows for pet people of all ages!</p>
+                <div class="flex w-40 justify-center items-center"><a id="heroLink"  class="bg-accent-c inline-block rounded-lg px-4 py-2 w-auto text-white cursor-pointer">Get Started</a></div>
+            </div>
         </div>
-        
     </div>
-</section>
+</div>
 
 <style>
     
 </style>
+
+<script >
+    function focusFormInput () {
+        const inputElement = document.getElementById('firstName');
+        if (inputElement) {
+            inputElement.focus();
+        }
+    }
+    
+    let heroLink = document.getElementById('heroLink');
+    heroLink.addEventListener('click', () => focusFormInput())
+</script>

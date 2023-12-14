@@ -1,17 +1,19 @@
 ---
 const { src } = Astro.props;
----
-<section class="bg-gradient-to-b from-secondary via-primary to-secondary
-p-8 text-center text-neutral-200" >
-    <div class="relative flex items-center justify-center h-screen mb-12 overflow-hidden rounded-xl">
-        <p class="text-4xl mt-8 mb-8">Sizzle Reel - WIP</p>
-        <!-- Sizzle Reel -->
-        <video class="absolute z-10 min-w-full min-h-full max-w-none aspect-video" id="sizzleReel" loop muted autoplay>
-            <source src={src}></source>
-        </video>
-    </div>
-</section>
 
+---
+<div class="flex p-8 text-center items-center justify-center text-accent-c">
+    <div class="flex flex-col items-center">
+        <div class="h-full mb-12 overflow-hidden rounded-3xl shadow-2xl shadow-black">
+            <!-- Sizzle Reel -->
+            <video class="z-10 min-w-60 max-w-1/2 aspect-video" id="sizzleReel" loop muted autoplay>
+                <source src={src}></source>
+            </video>
+        </div>
+    </div>
+</div>
+    
 <style>
     
+
 </style>

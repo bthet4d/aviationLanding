@@ -1,68 +1,139 @@
 ---
-import featureVideo from '../assets/videos/featureVideo.mp4';
-import sizzleVideo from '../assets/videos/funnyDogPlaying.mp4';
-import trailersVideo from '../assets/videos/awesomeDogMovies.mp4';
 
+import buddiLogo_transparent from '../assets/images/buddi_transparent_cropped.png';
+
+import { Image } from 'astro:assets';
 import Layout from '../Layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
 import CallToAction from '../components/CallToAction.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Footer from '../components/Footer.astro';
-import VideoWall from '../components/VideoWall.astro';
-import SizzleReel from '../components/SizzleReel.astro';
+import Video from '../components/Video.astro';
 import Countdown from '../components/Countdown.astro';
+import SocialMedia from '../components/SocialMedia.astro';
 
-const title = "Watch Buddi";
+const title = "Watch buddi";
 const copyRight = "Unified Media Development, LLC.";
 ---
 
 <Layout	title={title}>
         <Nav />
-        <Hero />
-        <CallToAction />
-        <Countdown />            
-        <VideoWall class="bg-gradient-to-a from-primary via-secondary to-primary" src={featureVideo}/>
-        
-        <section class="flex flex-col items-center text-center text-neutral-200
-        bg-gradient-to-b from-primary via-primary to-secondary
-        inset-x-0 
-        bottom-0 
-        p-4">
-            <div class="flex flex-col items-center justify-center">
-                <p class="text-lg mt-4 mb-4">Movies, TV Shows, Live Cams, 24/7 Streaming Channels… content by pet people, for pet people, commercial free, for only $7.99 a month, or $79 a year.</p>
-                <p class="text-lg mt-4 mb-4">Here&apos;s a quick preview of what buddi is bringing to your screen.</p>
-            </div>
-        </section>
-        
-        <SizzleReel src={sizzleVideo}/>
-    
-        <section class="flex flex-col items-center text-center text-neutral-200
-        bg-gradient-to-b from-secondary via-primary to-primary
 
-        inset-x-0 
-        bottom-0 
-        p-4">
-            <div class="conainer flex flex-col items-center justify-center">
-                <p class="text-lg mt-4 mb-4">Wanna see even more of what buddi fetched? Check out these trailers!</p>
+        <div class="bg-accent-a">
+            <Hero />
+            <CallToAction />
+            <Countdown />
+
+        </div>
+        <div class="bg-gradient-to-b from-background-a to-background-b border-t-2 border-accent-c w-full h-full">
+            <div class="flex">
+                <Video path="https://www.youtube.com/embed/LeSAzZIkPTc?si=a1uLAF1zUrWiaeai"/>
             </div>
-        </section>
-    
-        <VideoWall class="bg-gradient-to-b from-secondary via-secondary to-primary" src={trailersVideo}/>
-        <ContactForm />
-        
-        <section class="flex flex-col items-center text-center text-neutral-200
-        inset-x-0 
-        bottom-0 
-        p-4">
-            <div class="conainer flex flex-col items-center justify-center">
-                <p class="text-lg mt-4 mb-4">Follow buddi on social media and find out what buddi is up to!</p>
+            <div class="flex p-8 mt-8">
+                
+                <div class="flex flex-1">
+                    <div class="flex flex-col">
+                        <div class="flex flex-1 items-center justify-center m-8">
+                            <Image
+                            src={buddiLogo_transparent}
+                            alt="Watch buddi Logo"
+                            class="flex"
+                            />
+                        </div>
+                        <p class="flex text-4xl mt-32 text-accent-c font-bold pr-8">Movies, TV Shows, Live Cams, 24/7 Streaming Channels… content by pet people, for pet people, commercial-free, for only $7.99 a month, or $79 a year.</p>
+                        <div class="flex items-center justify-center">
+                            
+                            <div class="flex flex-col h-auto lg:w-1/2 sm:w-auto mt-32 p-6 rounded-lg shadow-xl shadow-black bg-gradient-to-br from-accent-b to-background-a ">
+                                <p class="flex lg:text-2xl md:text-lg overflow-wrap mt-4 mb-2 text-accent-c font-bold">At buddi, we know you want to find and watch entertaining and family-friendly content featuring pets. The problem is, there isn&apos;t a one-stop, personalized app which can make you feel frustrated.</p>
+                                <div class="flex w-40 justify-center items-center"><a id="learnMoreLink" class="bg-accent-c inline-block rounded-lg px-4 py-2 w-auto text-white cursor-pointer">Learn More</a></div>
+                            </div>
+                        </div>
+                        <div class="flex mt-32 p-8">
+                            <p class=" text-4xl text-accent-c font-bold pr-8">We believe there should be an app where family-friendly movies and tv shows featuring pets are served up just for you, ad free. At buddi, we&apos;re made up of dedicated pet people just like you, which is why we passionately curated and created this content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-        </section>
+            <div class="flex flex-col inset-0 items-center justify-center z-0" >
+                <div>
+                    <div class="flex flex-col lg:mt-32 sm:mt-16 lg-mb-32 sm:mb-16 p-8 text-2xl w-full justify-center items-center">
+                        <div class="w-full h-full rounded-lg p-8 bg-gradient-to-br from-accent-b to-background-a text-accent-c shadow-xl shadow-black">
+                            <p class="text-4xl font-bold overflow-wrap">Here&apos;s how you can enjoy buddi:</p>
+                            <div class="">
+                                <ol class="text-2xl list-decimal ml-6">
+                                    <li>Click <a class="font-bold underline cursor-pointer" id="clickHereLink">HERE</a> to check us out</li>
+                                    <li>Sign up</li>
+                                    <li>Enjoy!</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-background-b text-accent-c">
+            <div class="flex flex-col w-full items-center justify-center ">
+                
+                <div class="flex items-center text-center mt-16 mb-8 p-8 font-bold">
+                    <p class="text-4xl">
+                        Here&apos;s a quick preview of what buddi is bringing to your screen.
+                    </p>
+                </div>
+                
+                <div class="w-3/4">
+                    <Video path="https://www.youtube.com/embed/yhCY0fxx1n8?si=EfCjcB4Ry-D9-ZQz"/> 
+                </div>
+                                    
+                <div class="flex">
+                    <div class="items-end text-end mt-16 mb-8 p-8 font-bold">
+                        <p class="text-4xl mt-4 mb-4">Wanna see even more of what buddi fetched? Check out these trailers!</p>
+                    </div>
+                </div>
+                
+                <div class="w-3/4">
+                    <Video path="https://www.youtube.com/embed/UbUQNAdDdoE?si=ldrqJU2_IEnJmZtA"/>
+                </div>
+                
+                <div class="flex">
+                    <ContactForm />
+                </div>
+
+                <div class="flex mb-8">
+                    <SocialMedia></SocialMedia>
+                </div>
+            </div>
+        </div>
+            
+        <div class="bg-accent-c">
+            <Footer copyRight={copyRight}></Footer>
+        </div>
         
-        <Footer copyRight={copyRight}></Footer>
 </Layout>
 
+<style>
+
+</style>
+
+<script>
+    function focusFormInput () {
+        const inputElement = document.getElementById('firstName');
+        if (inputElement) {
+            inputElement.focus();
+        }
+    }
+    
+    let learnMore = document.getElementById('learnMoreLink');
+    learnMore.addEventListener('click', () => focusFormInput());
+
+    let clickHereLink = document.getElementById('clickHereLink');
+    clickHereLink.addEventListener('click', () => focusFormInput());
+
+    
+</script>
 
 
 

@@ -1,25 +1,15 @@
 ---
-import SocialMedia from './SocialMedia.astro';
-
 const { copyRight } = Astro.props;
 
 ---
-
 <footer
-  class="flex flex-col items-center text-center text-neutral-200
-  bg-gradient-to-b from-primary via-secondary to-secondary
-  inset-x-0 
-  bottom-0 
-  p-4">
-
-  <SocialMedia></SocialMedia>
-  <p class="text-lg mt-16 mb-4">For any business inquiries, please email contact@unifiedd.media</p>
+  class="flex flex-col items-center text-center inset-x-0 bottom-0 p-16">
+  <p class="text-2xl font-bold mt-2 mb-2">For any business inquiries, please email contact@unifiedd.media</p>
   <!--Copyright section-->
-  <div
-    class="w-full p-4 text-center">
+  <div class="w-full mr-2 text-center">
     © 2024 Copyright:
     <a
-      class="text-neutral-400"
+      class="text-xl"
       href=""
       >{copyRight}  All Rights Reserved</a
     >
@@ -28,10 +18,4 @@ const { copyRight } = Astro.props;
 
 <style>
 
-
 </style>
-
-
-
-<!--  -->
-  

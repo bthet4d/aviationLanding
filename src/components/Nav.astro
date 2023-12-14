@@ -1,16 +1,18 @@
 ---
-
+import { Image } from 'astro:assets';
+import buddiLogo from '../assets/images/buddi_transp_small.png';
 ---
 
-<nav class="bg-gradient-to-b from-secondary via-secondary to-primary text-neutral-400 p-4">
-  <div class="container mx-auto flex items-center justify-between mt-4 mb-4">
-    <a href="#" class="text-2xl font-bold">Logo</a>
+<nav class="bg-gradient-to-br from-background-a to-background-b border-b-2 border-accent-c p-4 text-white">
+  <div class="container mx-auto flex items-center justify-between mt-4 mb-4 ">
+    <Image
+        src={buddiLogo}
+        alt="" />
     <br>
-    <ul class="hidden md:flex space-x-4">
-      <!-- <li><a href="#">Home</a></li> -->
-      <li><a href="#videos">Videos</a></li>
-      <li><a href="#contactForm">Newsletter</a></li>
-      <li><a href="#followUs">Social Media</a></li>
+    <ul class="hidden md:flex space-x-4 text-2xl">
+      <li class="bg-accent-c rounded-xl pt-2 pb-2 pl-4 pr-4"><a href="#videos" class="cursor-pointer">Videos</a></li>
+      <li class="bg-accent-c rounded-xl pt-2 pb-2 pl-4 pr-4"><a id="navLink" class="cursor-pointer">Newsletter</a></li>
+      <li class="bg-accent-c rounded-xl pt-2 pb-2 pl-4 pr-4"><a href="#followUs" class="cursor-pointer">Social Media</a></li>
     </ul>
   </div>
 </nav>
@@ -18,3 +20,15 @@
 <style>
   
 </style>
+
+<script >
+  function focusFormInput () {
+      const inputElement = document.getElementById('firstName');
+      if (inputElement) {
+          inputElement.focus();
+      }
+  }
+  
+  let navLink = document.getElementById('navLink');
+  navLink.addEventListener('click', () => focusFormInput())
+</script>

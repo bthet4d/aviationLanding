@@ -1,37 +1,35 @@
 ---
 
 ---
-<section class="flex flex-col mt-16 mb-16 h-96 justify-center items-center text-center
-">
-    <div class="flex flex-row md:text-7xl sm:text-3xl min-h-full mb-16 pb-16 pt-16">
-        <div class="p-1.5 bg-neutral rounded-box text-neutral-200">
-            <span class="countdown font-mono m">
+<div id="timer" class="flex flex-col justify-center items-center text-center text-white">
+    <div class="flex lg:16xl md:text-8xl sm:text-2xl min-h-full mb-16">
+        <div class="p-1.5 mr-4 rounded-box">
+            <span class="countdown">
                 <span id="days"></span>
             </span>
         </div> 
-        <div class="p-1.5 bg-neutral rounded-box text-neutral-200">
-            <span class="countdown font-mono">
+        <div class="p-1.5 mr-4 rounded-box">
+            <span class="countdown">
                 <span id="hours"></span>
             </span>
         </div> 
-        <div class="p-1.5 bg-neutral rounded-box text-neutral-200">
-            <span class="countdown font-mono">
+        <div class="p-1.5 mr-4 rounded-box">
+            <span class="countdown">
                 <span id="minutes" ></span>
             </span>
         </div> 
-        <div class="p-1.5 bg-neutral rounded-box text-neutral-200">
-            <span class="countdown font-mono">
+        <div class="p-1.5 mr-4 rounded-box">
+            <span class="countdown">
                 <span id="seconds"></span>
             </span>
         </div>
     </div>
-</section>
-
+</div>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         // target date
-        const countDownDate = new Date("Jan 1, 2025 00:00:00").getTime();
+        const countDownDate = new Date("March 23, 2024 00:00:00").getTime();
         const now = new Date().getTime();
         let distance = countDownDate - now;        
         const countdownInterval = setInterval(() => {
@@ -52,9 +50,9 @@
             let minutes = document.getElementById('minutes');
             let seconds = document.getElementById('seconds');
 
-            days.innerHTML = remainingDays.toString() + ' days';
-            hours.innerHTML = remainingHours < 10 ? '0' + remainingHours.toString() + ' hours' : remainingHours.toString() + ' hours';
-            minutes.innerHTML = remainingMinutes < 10 ? '0' + remainingMinutes.toString() + ' min' : remainingMinutes.toString() + ' min';
+            days.innerHTML = remainingDays.toString() + ' days - ';
+            hours.innerHTML = remainingHours < 10 ? '0' + remainingHours.toString() + ' hours - ' : remainingHours.toString() + ' hours - ';
+            minutes.innerHTML = remainingMinutes < 10 ? '0' + remainingMinutes.toString() + ' min - ' : remainingMinutes.toString() + ' min - ';
             seconds.innerHTML = remainingSeconds < 10 ? '0' + remainingSeconds.toString() + ' sec': remainingSeconds.toString() + ' sec';
         }
 

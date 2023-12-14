@@ -1,26 +1,28 @@
 ---
 
+
 ---
-<section class="flex flex-col items-center text-center text-neutral-200
-   
-bg-gradient-to-b from-secondary via-primary to-primary
-inset-x-0 
-bottom-0 
-p-4">
-
-    <div class="flex items-center justify-center mt-8 mb-8 pb-8  relative">
-      <div class="pl-16">
-        <p class="text-xl mt-4 mb-4">buddi arrives on this website and mobile app stores on National Puppy Day, March 23, 2024!</p>
-
-        <a href="#contactForm" class="bg-yellow-700 px-4 py-2 mt-6 rounded-full hover:bg-blue-900 transition">Sign Up Now</a>
-      </div>
+<div class="flex flex-col items-center text-center inset-x-0 bottom-0 p-4">
+  <div class="flex items-center justify-center mt-8 pb-8  relative text-white">
+    <div class="pl-16">
+      <p class="lg:text-5xl md:text-3xl sm:text-lg mt-4 mb-4 font-bold text-white">buddi arrives on this website and mobile app stores on National Puppy Day, March 23, 2024!</p>
+      <a id="ctaLink" class="px-4 py-2 mt-6 rounded-full text-xl bold bg-accent-b inline-block text-center cursor-pointer">Sign Up Now</a>
     </div>
-
-    
-</section>
-
-
+  </div>
+</div>
 
 <style>
 
 </style>
+
+<script>
+  function focusFormInput () {
+        const inputElement = document.getElementById('firstName');
+        if (inputElement) {
+            inputElement.focus();
+        }
+    }
+    
+    let contactLink = document.getElementById('ctaLink');
+    contactLink.addEventListener('click', () => focusFormInput());
+</script>
